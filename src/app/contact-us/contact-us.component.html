@@ -1,0 +1,38 @@
+<div class="container">
+  <form id="contact" action="" method="post" (ngSubmit) = "onSubmit(f)" #f="ngForm">
+    <h3>Quick Contact</h3>
+    <br>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus
+                  id = "username"
+                      ngModel
+                      name="username">
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required
+                  id="useremail"
+                       ngModel
+                       name="email"
+                        required
+                        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                        #email = "ngModel">
+      <div *ngIf="!email.valid">
+        Invalid Email
+      </div>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number" type="tel" tabindex="3" required
+                  id="userphone"
+                       ngModel
+                       name="phone">
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" [disabled]="!f.valid">Submit</button>
+    </fieldset>
+  </form>
+
+
+</div>

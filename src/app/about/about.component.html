@@ -1,3 +1,34 @@
-<p>
-  about works!
-</p>
+
+
+<div class="container">
+  <form id="contact" action="" method="post" [formGroup]="myForm" (ngSubmit)="onSubmitAD()">
+    <div formArrayName="comment">
+      <h2 >Comments</h2>
+        <fieldset>
+          <textarea placeholder= "" tabindex="5" required formControlName="{{i}}"></textarea>
+        </fieldset>
+    </div>
+    <button type="button" class="btn" (click)="onAddComment()">Add Comment</button>
+  </form>
+</div>
+
+  <div class="slider-holder">
+    <span id="slider-image-1"></span>
+    <span id="slider-image-2"></span>
+    <span id="slider-image-3"></span>
+    <div class="image-holder">
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/14633391_1152811188121949_8061884117203643280_o.jpg?oh=8df83a5d243e5ad30226215dd7ff6871&oe=5959625F" class="slider-image" />
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/14680595_1148107761925625_2070364442739702620_n.jpg?oh=ad99f6413b6c038859b9ca035b6e1e39&oe=5927A43C" class="slider-image" />
+    </div>
+    <div class="button-holder">
+      <a href="#slider-image-1" class="slider-change"></a>
+      <a href="#slider-image-2" class="slider-change"></a>
+      <a href="#slider-image-3" class="slider-change"></a>
+    </div>
+  </div>
+
+<p>KHATOON E JANNAT is a Islamic Centre in Jersey City,a place for lovers and followers of Ahlebaith.
+  Location-779 Bergen ave,Jersey City,NJ-07306</p>
+<hr>
+<p>This website features events, news , pictures and videos of the Azadari and other religious events
+  like Namaz,  Majalis , Matamdari &   Mehfil etc</p>
